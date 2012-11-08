@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Error 404]]></title>
+  <link href="http://blog.cobicobi.web.id/atom.xml" rel="self"/>
+  <link href="http://blog.cobicobi.web.id/"/>
+  <updated>2012-11-08T07:19:38+07:00</updated>
+  <id>http://blog.cobicobi.web.id/</id>
+  <author>
+    <name><![CDATA[W. Priyambodo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
