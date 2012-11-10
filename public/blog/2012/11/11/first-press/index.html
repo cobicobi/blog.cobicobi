@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>First Press - cobi's</title>
+  <meta name="author" content="W. Priyambodo">
+
+  
+  <meta name="description" content="">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.cobicobi.web.id/blog/2012/11/11/first-press">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="cobi's" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Droid+Sans|Old+Standard+TT|PT+Sans|PT+Mono|Droid+Sans+Mono|PT+Serif|Droid+Serif|Vollkorn|Open+Sans|Inconsolata' rel='stylesheet' type='text/css'>
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="/">cobi's</a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+  <!--<li><a href="/blog/archives">Archives</a></li> -->
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:blog.cobicobi.web.id" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+            </fieldset>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+    <div class="row-fluid">
+      
+<article class="hentry span9" role="article">
+
+  
+  <header class="page-header">
+    
+      <h1 class="entry-title">First Press</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-11T01:13:00+07:00" pubdate data-updated="true">Nov 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I will share my experience setting up this blog using <a href="http://octopress.org/">Octopress</a>. Octopress is a blogging framework designed for <a href="http://github.com/mojombo/jekyll">Jekyll</a>, the blog aware static site generator. Why I&#8217;m using it? Well, I&#8217;m just curious about how it works. Plus, I like the idea of serving my blog as static files, which means I can host it anywhere. Basically, I was just followed this great little <a href="http://octopress.org/docs">docs</a>, and with a little bit changes here and there, this blog is already up and running. So, let&#8217;s get started.</p>
+
+<p><strong>Disclaimer</strong>: This post is not intended as a complete guide to set up Octopress, you can refer to the official documentation for that. This post mainly address some issue I found when following the documentation, and how I work it around. And, I’m no Ruby guy, so don’t expect me to explain anything detailed about Ruby.</p>
+
+<h3>Requirements</h3>
+
+<p>First thing first, you must install Ruby 1.9.3, at least that&#8217;s what the docs stated, so I don&#8217;t know if others version will work or not. There are many ways to install it, but I use <a href="http://rbenv.org">rbenv</a>. From what I understand, it&#8217;s similar to Python&#8217;s <a href="http://www.virtualenv.org/en/latest/">virtualenv</a>, which is to provide a way to easily install and switch between diferrent versions of Ruby. The guide from the <a href="http://octopress.org/docs/setup/rbenv/">docs</a> itself is pretty straight forward, except I can&#8217;t get it work after following all the steps. Something like &#8220;ruby 1.9.3-p194 is not installed&#8221; keeps appearing. I found out the solution by install the version 1.9.3-p194, whatever that version number means. Just execute these commands and you&#8217;ll be all set.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rbenv install 1.9.3-p194
+</span><span class='line'>rbenv rehash</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Installing</h3>
+
+<p>After you get Ruby installed, the next step is setting up Octopress itself.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>ruby --version         # Should report Ruby 1.9.3
+</span><span class='line'>gem install bundler
+</span><span class='line'>rbenv rehash
+</span><span class='line'>bundle install         # Install dependencies
+</span><span class='line'>rake install           # Install the default Octopress theme</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Those steps will get you a copy of Octopress, and now you will need to configure it. Open up the <code>_config.yml</code> file. In <code>_config.yml</code> you must change the <code>url</code>, and you’ll probably want to change the <code>title</code>, <code>subtitle</code>, <code>author</code> and enable some 3rd party services. As you can see, I integrate my Twitter feed in this blog and this is simply done by enabling the 3rd party service.</p>
+
+<h3>Adding Content</h3>
+
+<p>Done with all the configuration thingy? Now you can start adding the content. As stated in the <a href="http://octopress.org/docs/blogging/">docs</a>, to create a new post you can simply execute:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["title"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>but if you use Linux like me (I use Ubuntu by the way), you will need to escape the &#8216;[&#8217; and &#8216;]&#8217;, so instead you will need to execute:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post\["title"\]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This command will create a file named <code>title.markdown</code> in <code>source/_posts</code> folder. The filename will determine your url. With the default permalink settings the url would be something like <code>http://site.com/blog/2012/11/08/title/</code>. The created file is a <a href="http://daringfireball.net/projects/markdown/">markdown</a>. The documentation said there are more format supported other than markdown but I have no idea what it is.</p>
+
+<p>After prepared the content, you can generate all the posts and pages into <code>public/</code> directory. The files in this directory is the only thing you need for deployment. You can also preview it first in a testing webserver using provided command.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate   # Generates posts and pages into the public directory
+</span><span class='line'>rake watch      # Watches source/ and sass/ for changes and regenerates
+</span><span class='line'>rake preview    # Watches, and mounts a webserver at http://localhost:4000</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Deploying</h3>
+
+<p>Deploying is very easy. If you want to deploy using git based deployment workflow, the <a href="http://octopress.org/docs/deploying/">docs</a> covers how to deploy into Heroku. I have tried it before and you can see the result in this link <a href="http://cobipress.herokuapp.com">http://cobipress.herokuapp.com</a>. For this blog, I simply upload the files in <code>public/</code> directory into my hosting server as the site is just a bunch of generated static files.</p>
+
+<h3>Using themes</h3>
+
+<p>Octopress provides theme support and adding more themes and installing it is a breeze. I use the <a href="https://github.com/bkutil/bootstrap-theme">bootstrap-theme</a> with a bit modifications. Simply get the theme and copy into <code>.theme/</code> directory.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/bkutil/bootstrap-theme.git bootstrap-theme
+</span><span class='line'>cp -R bootstrap-theme .themes/bootstrap
+</span><span class='line'>rake install['bootstrap']
+</span><span class='line'>rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Updating Octopress</h3>
+
+<p>To keep Octopress up-to-date, you just need to pull from the master branch in the git repo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git pull octopress master     # Get the latest Octopress
+</span><span class='line'>bundle install                # Keep gems updated
+</span><span class='line'>rake update_source            # update the template's source
+</span><span class='line'>rake update_style             # update the template's style</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Read more in the <a href="http://octopress.org/docs/updating/">docs</a>.</p>
+
+<p>Well, that&#8217;s it. All in all, it was a good experience for me because I learned a couple of new things. Yay.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">W. Priyambodo</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-11T01:13:00+07:00" pubdate data-updated="true">Nov 11<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    
+    <ul class="pager">
+      
+      <li><a href="/blog/archives">Blog Archives</a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">Recent Posts</li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/11/first-press/">First Press</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="well">
+  <ul id="tweets" class="nav">
+    <li class="nav-header">Latest Tweets</li>
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("C0BIC0BI", 3, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+  
+    <!--<p>Follow <a href="http://twitter.com/C0BIC0BI">@C0BIC0BI</a></p>-->
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  Copyright &copy; 2012 - W. Priyambodo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span><br /> 
+  <span class="credit">Theme by <a href="https://github.com/bkutil/bootstrap-theme">Balazs Kutil</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

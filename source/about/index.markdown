@@ -1,11 +1,7 @@
 ---
 layout: page
-title: "About"
-date: 2012-11-08 05:58
-comments: true
-sharing: true
+title: "about"
+comments: false
+sharing: false
 footer: true
 ---
-Hi,
-
-My name is Wisnu Priyambodo.

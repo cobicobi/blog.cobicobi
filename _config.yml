@@ -2,8 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
+#url: http://www.cobicobi.web.id
 url: http://blog.cobicobi.web.id
-title: Error 404
+title: cobi's
 subtitle: Page Not Found
 author: W. Priyambodo
 simple_search: http://google.com/search
@@ -67,9 +68,9 @@ github_skip_forks: true
 twitter_user: C0BIC0BI
 twitter_tweet_count: 3
 twitter_show_replies: false
-twitter_follow_button: true
+twitter_follow_button: false
 twitter_show_follower_count: false
-twitter_tweet_button: true
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false
